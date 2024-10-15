@@ -4,7 +4,7 @@ from typing import Annotated
 from pydantic import create_model
 from fastapi import FastAPI, Depends, HTTPException
 from contextlib import asynccontextmanager
-from app.utils import symptoms_list
+from utils import symptoms_list
 
 ml_model = {}
 REPO_ID = "AWeirdDev/human-disease-prediction"
