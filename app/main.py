@@ -38,7 +38,7 @@ Symptoms = create_model("Symptoms", **query_parameters)
 
 @app.get("/diagnosis")
 async def get_diagnosis(
-    symptoms: Annotated[Symptoms, Depends()],
+    symptoms: Annotated[Symptoms, Depends()], # type: ignore
 ):
     # Convert the boolean inputs to a numerical array for the model
     array = [
